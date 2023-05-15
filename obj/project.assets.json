@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\LinkedListDataStructure\\LinkedListDataStructure.csproj",
+      "projectUniqueName": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\LinkedListDataStructure.csproj",
       "projectName": "LinkedListDataStructure",
-      "projectPath": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\LinkedListDataStructure\\LinkedListDataStructure.csproj",
+      "projectPath": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\LinkedListDataStructure.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\LinkedListDataStructure\\obj\\",
+      "outputPath": "D:\\BridgeLabz Second batch\\LinkedListDataStructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
