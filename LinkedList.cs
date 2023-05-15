@@ -18,12 +18,8 @@ namespace LinkedListDataStructure
             }
             else
             {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                node.next = head;
+                head = node;
             }
             Console.WriteLine("{0} inserted into Linked list", node.data);
         }
