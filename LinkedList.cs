@@ -8,16 +8,37 @@ namespace LinkedListDataStructure
 {
     public class LinkedList
     {
-        public static void Add()
+        public Node head;
+        public void Add(int data)
         {
-            LinkedList<int> linked = new LinkedList<int>();
-            linked.AddFirst(56);
-            linked.AddLast(30);
-            linked.AddLast(70);
-
-            foreach (var input in linked)
+            Node node = new Node(data);
+            if (this.head == null)
             {
-                Console.WriteLine(input);
+                this.head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} inserted into Linked list", node.data);
+        }
+        public void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
             }
         }
     }
