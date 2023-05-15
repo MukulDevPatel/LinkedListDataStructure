@@ -41,5 +41,33 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
         }
+        public Node InserNumBetweenInteger(int position, int newData)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid position");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(newData);
+                newNode.next = this.head;
+                head = newNode;
+            }else
+            {
+                while(position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(newData);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+            }
+            Console.WriteLine("Inserted value is: "+ newData);
+            return head;
+        }
     }
 }
