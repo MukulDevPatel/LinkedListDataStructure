@@ -27,6 +27,31 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine("{0} inserted into Linked list", node.data);
         }
+
+
+        public int PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            if (head.next == null)
+            {
+                head = null;
+                return head.data;
+            }
+            Node newData = head;
+            while (newData.next.next != null)
+            {
+                newData = newData.next;
+            }
+            int poppedElement = newData.next.data;
+            newData.next = null;
+            return poppedElement;
+        }
+
+
+
         public void Display()
         {
             Node temp = this.head;
@@ -40,15 +65,6 @@ namespace LinkedListDataStructure
                 Console.WriteLine(temp.data);
                 temp = temp.next;
             }
-        }
-        public void Pop()
-        {
-            if (this.head == null)
-            {
-                Console.WriteLine("LinkedList is empty");
-            }
-            Console.WriteLine("This value has removed: "+this.head.data);
-            this.head = this.head.next;
         }
     }
 }
