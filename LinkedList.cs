@@ -28,7 +28,6 @@ namespace LinkedListDataStructure
             Console.WriteLine("{0} inserted into Linked list", node.data);
         }
 
-
         public Node Search(int targetValue)
         {
             Node newNode = head;
@@ -41,6 +40,18 @@ namespace LinkedListDataStructure
                 newNode = newNode.next;
             }
             return null;
+        }
+
+
+        public void InsertNumAtParticularPosition(int targetValue, int newData)
+        {
+            Node targetNode = Search(targetValue);
+            if (targetNode != null)
+            {
+                Node newNode = new Node(newData);
+                newNode.next = targetNode.next;
+                targetNode.next = newNode;
+            }
         }
 
 

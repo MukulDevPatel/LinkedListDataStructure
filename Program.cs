@@ -1,4 +1,5 @@
-﻿namespace LinkedListDataStructure
+﻿
+namespace LinkedListDataStructure
 {
     class Program
     {
@@ -13,14 +14,10 @@
             linkedList.Display();
 
             int targetValue = 30;
-            Node searchNode = linkedList.Search(targetValue);
-            if (searchNode != null)
-            {
-                Console.WriteLine("Searched element key: {0}", targetValue);
-            }else
-            {
-                Console.WriteLine("Searched element key {0} is not add.", targetValue);
-            }
+            int newData = 40;
+            linkedList.InsertNumAtParticularPosition(targetValue, newData);
+            Console.WriteLine("Insert value {1} after {0} value.",targetValue,newData);
+            linkedList.Display();
         }
     }
 }
