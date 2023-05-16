@@ -41,33 +41,14 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
         }
-        public Node InserNumBetweenInteger(int position, int newData)
+        public void Pop()
         {
-            if (position < 1)
+            if (this.head == null)
             {
-                Console.WriteLine("Invalid position");
+                Console.WriteLine("LinkedList is empty");
             }
-            if (position == 1)
-            {
-                var newNode = new Node(newData);
-                newNode.next = this.head;
-                head = newNode;
-            }else
-            {
-                while(position-- != 0)
-                {
-                    if (position == 1)
-                    {
-                        Node node = new Node(newData);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    head = head.next;
-                }
-            }
-            Console.WriteLine("Inserted value is: "+ newData);
-            return head;
+            Console.WriteLine("This value has removed: "+this.head.data);
+            this.head = this.head.next;
         }
     }
 }
