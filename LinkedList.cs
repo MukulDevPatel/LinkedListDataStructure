@@ -29,25 +29,18 @@ namespace LinkedListDataStructure
         }
 
 
-        public int PopLast()
+        public Node Search(int targetValue)
         {
-            if (head == null)
+            Node newNode = head;
+            while (newNode != null)
             {
-                Console.WriteLine("LinkedList is empty");
+                if (newNode.data == targetValue)
+                {
+                    return newNode;
+                }
+                newNode = newNode.next;
             }
-            if (head.next == null)
-            {
-                head = null;
-                return head.data;
-            }
-            Node newData = head;
-            while (newData.next.next != null)
-            {
-                newData = newData.next;
-            }
-            int poppedElement = newData.next.data;
-            newData.next = null;
-            return poppedElement;
+            return null;
         }
 
 

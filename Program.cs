@@ -12,9 +12,15 @@
             linkedList.Add(70);
             linkedList.Display();
 
-            int poppedElement = linkedList.PopLast();
-            Console.WriteLine("Element removed: {0}", poppedElement);
-            linkedList.Display();
+            int targetValue = 30;
+            Node searchNode = linkedList.Search(targetValue);
+            if (searchNode != null)
+            {
+                Console.WriteLine("Searched element key: {0}", targetValue);
+            }else
+            {
+                Console.WriteLine("Searched element key {0} is not add.", targetValue);
+            }
         }
     }
 }
